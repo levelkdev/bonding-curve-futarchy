@@ -4,7 +4,7 @@ This post proposes a self-contained futarchy mechanism for bonding curve tokens.
 
 #### Problem
 
-Using external [decentralized exchanges](https://ethresear.ch/t/batch-auctions-with-uniform-clearing-price-on-plasma/2554) for futarchy markets is likely the best price-finding solution for futarchy but, until they've achieved sufficient usability and liquidity, futarchies must be self contained providing their own price-finding mechanism. The current best know solution is use an [LMSR](http://mason.gmu.edu/~rhanson/mktscore.pdf) [automated market maker](https://blog.gnosis.pm/radical-markets-for-elephants-a742916812db) but this presents significant challenge. Each LMSR market must be funded up front in order to provide liquidity. This places a significant burden on the party that needs to provide the funding as well as additional complexity in determining the necessary amount of funding.
+[Decentralized exchanges](https://ethresear.ch/t/batch-auctions-with-uniform-clearing-price-on-plasma/2554) are likely the best price-finding solution for futarchy markets but, until they've achieved sufficient usability and liquidity, futarchies must be self contained providing their own price-finding mechanism. The current best know solution is use an [LMSR](http://mason.gmu.edu/~rhanson/mktscore.pdf) [automated market maker](https://blog.gnosis.pm/radical-markets-for-elephants-a742916812db) but this presents significant challenge. Each LMSR market must be funded up front in order to provide liquidity. This places a significant burden on the party that needs to provide the funding as well as additional complexity in determining the necessary amount of funding.
 
 #### Bonding Curve Futarchy
 
@@ -19,7 +19,9 @@ A [bonding curve token](https://medium.com/@justingoro/token-bonding-curves-expl
 7. The decision is resolved using a normal futarchy decision function such as highest price over the last 24 hours.
 8. The winning bonding curve's reserve pool is converted back into ETH through the tokenized event and is used as the reserve for the main ABC bonding curve once again. The winning outcome tokens can be exchanged for ABC and the main ABC bonding curve can resume trading as normal.
 
-##### Drawbacks
+![alt text](https://raw.githubusercontent.com/levelkdev/bonding-curve-futarchy/master/Bonding%20Curve%20Futarchy.png "Bonding Curve Futarchy")
+
+#### Drawbacks
 
 While this construction doesn't require additional funding for the price-finding mechanism like constructions that rely on LMSR do, it comes with its own drawbacks:
 
